@@ -1,2 +1,22 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Counter</h1>
+
+<p>Count: <%= @count %></p>
+
+<ul>
+  <li><%= link_to '+ Increment', root_path(count: @increment_count) %></li>
+  <li><%= link_to '- Decrement', root_path(count: @decrement_count) %></li>
+</ul>
+
+<hr>
+
+<div class="dom-content-loaded">DOMContentLoaded is not fired🌴</div>
+<div class="turbolinks-load">turbolinks:load is not fired🌴</div>
+
+<hr>
+
+<ul>
+  <li>Pjax（Turbolinks）が有効な場合は、DOMContentLoadedが発火せず、turbolinks:loadのみ発火します</li>
+  <li>ページがすべて読み込まれた場合は、DOMContentLoadedが実行されます</li>
+  <li>Pjaxはheadの差分とbodyを入れ替えて、ページ遷移します</li>
+  <li>Pjaxでのページ遷移を保ちながらチャットボットを表示したい、というのが要件となります</li>
+</ul>

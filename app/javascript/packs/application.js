@@ -11,3 +11,13 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.dom-content-loaded');
+  container.innerText = 'DOMContentLoaded is fired🔥';
+});
+
+document.addEventListener('turbolinks:load', function () {
+  const container = document.querySelector('.turbolinks-load');
+  container.innerText = 'turbolinks:load is fired🔥';
+});
